@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="berandaMenu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/', 'admin', 'addbarang']">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Admin
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let barang of beranda" #slidingItem>
+      <ion-card>
+        <ion-item [routerLink]="['/', 'admin', 'edit', barang.id]" >
+          <ion-thumbnail slot="start">
+            <ion-img [src]="barang.imageUrl"></ion-img>
+          </ion-thumbnail>
+          <div class="ion-nowrap">
+            <ion-label>
+              {{barang.brand}} {{barang.model}}
+            </ion-label>
+            <ion-label>Rp.{{barang.harga}}</ion-label>
+            <ion-label>Tersedia : {{barang.stok}}</ion-label>
+          </div>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option color="danger" (click)="deleteBarang(barang, slidingItem)">
+            <ion-icon name="trash" slot="icon-only"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+        <ion-item-options side="start">
+          <ion-item-option color="primary" [routerLink]="['/', 'admin','edit', barang.id]" (click)="editBarang(barang, slidingItem)">
+            <ion-icon name="pencil-outline" slot="icon-only"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-card>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

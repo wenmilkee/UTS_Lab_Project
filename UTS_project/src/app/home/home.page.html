@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="berandaMenu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onModeChange(1)" *ngIf="display == 2">
+        <ion-icon name="list-outline"></ion-icon>
+      </ion-button>
+      <ion-button (click)="onModeChange(2)" *ngIf="display == 1">
+        <ion-icon name="grid-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-card *ngFor="let barang of beranda" >
+      <ion-list *ngIf="display == 1 && barang.stok > 0">
+      <ion-item [routerLink]="['./', barang.id]">
+        <ion-thumbnail slot="start">
+          <ion-img [src]="barang.imageUrl"></ion-img>
+        </ion-thumbnail>
+        <div class="ion-nowrap">
+        <ion-label>
+          {{barang.brand}} {{barang.model}}
+        </ion-label>
+          <ion-label>Rp.{{barang.harga}}</ion-label>
+          <ion-label>Tersedia : {{barang.stok}}</ion-label>
+        </div>
+      </ion-item>
+      </ion-list>
+    </ion-card>
+
+  <ion-grid fixed="true" *ngIf="display == 2">
+    <ion-row class="ion-justify-content-start">
+      <ion-col *ngFor="let barang of beranda" size="6" class="ion-text-center">
+        <ion-card [routerLink]="['./', barang.id]"
+                  *ngIf="barang.stok > 0"
+                  style="display: flex; height: 100%;">
+          <ion-item lines="none">
+            <div class="ion-nowrap">
+
+              <ion-card-header>
+                <ion-img [src]="barang.imageUrl" style="width: 100px;"></ion-img>
+                <b>{{barang.brand}} {{barang.model}}</b>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-label>
+                  Rp {{barang.harga}}
+                </ion-label>
+                <ion-label>
+                  Tersedia: {{barang.stok}}
+                </ion-label>
+              </ion-card-content>
+            </div>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

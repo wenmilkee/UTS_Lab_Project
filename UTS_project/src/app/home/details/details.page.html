@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+          <ion-img [src]="loadedBeranda.imageUrl"></ion-img>
+        <ion-list>
+          <ion-card  class="ion-padding">
+            <ion-card-title>
+              {{loadedBeranda.brand}} {{loadedBeranda.model}}
+            </ion-card-title>
+              <h3>
+                Rp.{{loadedBeranda.harga}}
+              </h3>
+              <ion-card-subtitle>
+                Tersedia : {{loadedBeranda.stok}}
+              </ion-card-subtitle>
+          </ion-card>
+          <ion-card>
+            <ion-item lines="none">
+              <ion-label >
+                Tentang Produk
+              </ion-label>
+            </ion-item>
+            <ion-item *ngIf="loadedBeranda.type == 'Prosessor'" lines="none">
+              <div class="ion-nowrap">
+                <ion-label>Base Clock : {{loadedBeranda.baseClock}} Ghz</ion-label>
+                <ion-label>Boost Clock : {{loadedBeranda.boostClock}} Ghz</ion-label>
+                <ion-label>Core : {{loadedBeranda.core}}</ion-label>
+                <ion-label>Threads : {{loadedBeranda.threads}}</ion-label>
+              </div>
+
+            </ion-item>
+            <ion-item *ngIf="loadedBeranda.type == 'Motherboard'" lines="none">
+              <div class="ion-nowrap">
+                <ion-label>Chipset : {{loadedBeranda.chipset}}</ion-label>
+                <ion-label>Processor : {{loadedBeranda.processor_compatible}}</ion-label>
+              </div>
+            </ion-item>
+            <ion-item *ngIf="loadedBeranda.type == 'RAM'" lines="none">
+              <div>
+                <ion-label>Speed : {{loadedBeranda.speed}} Mhz</ion-label>
+                <ion-label>Size : {{loadedBeranda.size}} GB</ion-label>
+              </div>
+            </ion-item>
+          </ion-card>
+        </ion-list>
+
+
+</ion-content>
