@@ -10,7 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b664763-4697-4ef2-885a-eaf344f056fb" name="Default Changelist" comment="" />
+    <list default="true" id="3b664763-4697-4ef2-885a-eaf344f056fb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UTS_project/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UTS_project/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UTS_project/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/UTS_project/src/app/app.component.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,13 +31,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/UTS_project/src/app" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\User\UTS_Lab_Project\UTS_Lab_25915\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\User\UTS_Lab_Project\UTS_project\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\UTS_Lab_Project\UTS_project\src\app" />
       <recent name="C:\Users\User\UTS_Lab_Project\UTS_Lab_25915\src\app" />
     </key>
   </component>
@@ -46,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602862463779</updated>
       <workItem from="1602862473100" duration="1843000" />
-      <workItem from="1602864480637" duration="436000" />
+      <workItem from="1602864480637" duration="1561000" />
     </task>
     <servers />
   </component>
