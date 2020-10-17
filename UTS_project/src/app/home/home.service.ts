@@ -8,7 +8,7 @@ export class HomeService {
   private beranda: Beranda[] = [
     {
       id: 'barang-1',
-      imageUrl: 'https://www.powerplanetonline.com/cdnassets/procesador_intel_core_i5-9400_05_ad_l.jpg',
+      imageUrl: 'https://ecs7.tokopedia.net/img/cache/700/product-1/2019/2/21/314325/314325_90a8090d-bf71-4ff6-896d-d196752dde7b_800_800.jpg',
       type: 'Prosessor',
       brand: 'Intel',
       model: 'Core i5-9400',
@@ -42,7 +42,7 @@ export class HomeService {
     },
     {
       id: 'barang-3',
-      imageUrl: 'https://www.powerplanetonline.com/cdnassets/procesador_intel_core_i5-9400_05_ad_l.jpg',
+      imageUrl: 'https://www.asrock.com/mb/photo/Fatal1ty%20B450%20Gaming%20K4.png',
       type: 'Motherboard',
       brand: 'ASUS',
       model: 'Asrock',
@@ -60,7 +60,7 @@ export class HomeService {
 
     {
       id: 'barang-4',
-      imageUrl: 'https://www.powerplanetonline.com/cdnassets/procesador_intel_core_i5-9400_05_ad_l.jpg',
+      imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81pl3HAVGtL._AC_SL1500_.jpg',
       type: 'GPU',
       brand: 'Nvidia Geforce',
       model: '1080 TI',
