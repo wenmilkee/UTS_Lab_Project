@@ -25,14 +25,17 @@
             <ion-label>About</ion-label>
           </ion-item>
         </ion-menu-toggle>
-        <ion-menu-toggle menu="berandaMenu">
-          <ion-item lines="none" routerLink="/home">
-            <ion-icon name="log-out-outline" slot="start"></ion-icon>
-            <ion-label>Exit</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
+
       </ion-list>
     </ion-content>
+    <ion-footer>
+      <ion-menu-toggle menu="berandaMenu">
+        <ion-item href="https://www.google.com/">
+          <ion-icon name="exit"></ion-icon>
+          <ion-label>Exit</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-footer>
   </ion-menu>
 
   <ion-router-outlet main></ion-router-outlet>

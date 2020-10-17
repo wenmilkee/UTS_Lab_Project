@@ -87,6 +87,12 @@ export class HomeService {
         return barang.id === barangId;
       })};
   }
+  deleteBarang(barangId: string) {
+    this.beranda = this.beranda.filter(barang => {
+      return barang.id !== barangId;
+    });
+  }
+
   addBarang(barang: Beranda){
     length = this.beranda.length;
     this.beranda.push({
